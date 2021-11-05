@@ -1,0 +1,236 @@
+
+.Pagina_Principal{
+	height: 70%;
+}
+
+
+.Principal{
+	/*border: 5px solid red;*/
+}
+
+.Principal ul{
+	position: relative;
+	justify-content: center;
+	font-size: 20px;
+	left: -0.9%;
+}
+
+.Principal ul li{
+	margin-left: 2px;
+	
+}
+
+.Principal ul li button{
+	color: black;
+	font-size: 19px;
+}
+
+.tab-content{
+	margin-top: 50px;
+}
+
+.tab-content table{
+	text-align: center;
+}
+
+
+/*--Factura - Admin----*/
+
+#pills-contact{
+
+	margin-bottom: 20px;
+	height: 100%;
+}
+
+.Factura-Codigo{
+	border: 2px solid black;
+	margin-top: 50px;
+	margin-left: 20px;
+	border-radius: 5px;
+}
+
+.Factura-Codigo button{
+	color: black;
+}
+
+.Contenido_Factura{
+	position: relative;
+	border: 1px solid silver;
+	text-align: center;
+	width: 53%;
+	left: 10%;
+}
+
+.Contenido_Factura form{
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: black;
+	
+}
+
+.Contenido_Factura form label{
+	font-weight: bold;
+	margin-top: 15px;
+	width: 120%;
+}
+
+.Contenido_Factura form select{
+	width: 53%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.Contenido_Factura .form-control{
+	/**/
+
+}
+
+.Contenido_Factura #Textarea_1{
+	border: 1px solid silver;
+	width: 70%;
+	height: 200px;
+}
+
+.Contenido_Factura #Textarea_2{
+	position: relative;
+	border: 1px solid silver;
+	width: 135%;
+	height: 200px;
+	left: -16%;
+}
+
+
+.Boton{
+	position: relative;
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+}
+
+.Boton button{
+	position: relative;
+	margin-left: 20px;
+	left: -7%;
+}
+
+
+/*--Factura - Admin----*/
+
+
+/*-------Diagnostico----------*/
+
+.Diagnostico{
+/**/
+}
+
+.Diagnostico-Codigo{
+	position: relative;
+	margin-top: 20px;
+	margin-left: 70px;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+
+.Contenido_Diagnostico{
+	width: 100%;
+	margin-bottom: 20px;
+	text-align: center;
+}
+/*-------Diagnostico----------*/
+
+.Boton{
+	position: relative;
+	text-align: center;
+	left: 5.5%;
+}
+
+table tr a{
+	margin-left: 10px;
+}
+
+
+.Boton_Diagnostico{
+	position: relative;
+	text-align: center;
+	left: 10%;
+	margin-bottom: 20px;
+}
+
+
+tr .text-center1{
+	/*border: 5px solid black;*/
+}
+
+tr .text-center1 a{
+	margin-bottom: 5px ;
+	width: 65%;
+}
+
+#Agregar_Empleado{
+	margin-bottom:25px; 
+}
+
+
+.icono{
+	font-size: 30px;
+}
+
+table tbody tr td a{
+	width: 60%;
+	margin-top: 10px;
+}
+
+
+table tbody tr td i{
+	font-size: 25px;
+}
+
+#btncrear{
+	margin-bottom: 25px;
+
+}
+
+/**/
+
+
+.Btn_Personal button{
+	width: 80%;
+	margin-left: 20px;
+	 text-transform: capitalize;
+}
+
+.Btn_Personal a{
+	position: relative;
+	 text-transform: capitalize;
+	width: 80%;
+	top: -5px;
+}
+
+
+.Principal ul{
+	position: relative;
+	text-transform: lowercase;
+	top: 50px;
+	font-size: 25px;
+}
+
+.Principal ul li button{
+	font-size: 25px;
+	margin-left: 30px;
+}
+
+
+.Principal .nav button:hover,.Principal .nav button.active {
+
+    background-color: transparent;
+    color:black;
+    border-bottom: 3px solid #6d6552;
+    border-radius: 0;
+}
+
+#borrar_usuario{
+	width: 70%;
+}

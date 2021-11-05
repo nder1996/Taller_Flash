@@ -1,0 +1,109 @@
+<%- include("../template/header", {title:'Admin'}) %>
+    
+    <link rel="stylesheet" href="css/Admin.css">
+</head>
+
+<body>
+
+    <%- include("../template/navbar") %>
+    <div class="Principal container-fluid">
+    <div class="container mb-5">
+        <button type="button" id="btncrear" class="btn btn-outline-primary mt-4"><i class="fas fa-car"></i> Añadir Vehiculo</button>
+        <table class="table table-bordered  text-center mt-4" id="tabla_vehiculos">
+            <thead>
+                <tr class="cabeza-tabla" class="text-white" style="background-color:#6d6552; color:white">
+                    <th scope="col">ID DE INGRESO</th>
+                    <th scope="col">NOMBRE DEL PROPIETARIO</th>
+                    <th scope="col">PLACA</th>
+                    <th scope="col">MARCA</th>
+                    <th scope="col">MODELO</th>
+                    <th scope="col">COLOR</th>
+                    <th scope="col">ACCIONES</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% vehiculos.forEach(vehiculo => { %>
+                <tr>
+                    <td><%= vehiculo.id_vehiculo %> </td>
+                    <td><%= clientesnombre[vehiculo.id_cliente] %></td>
+                    <td><%= vehiculo.placa %></td>
+                    <td><%= vehiculo.marca %></td>
+                    <td><%= vehiculo.modelo %></td>
+                    <td><%= vehiculo.color %></td>
+                    <td class="Btn_Personal">
+
+                        
+                        <a  onclick="confirmar('<%= vehiculo.id_vehiculo %>','<%= clientesnombre[vehiculo.id_cliente] %>')" class="btn btn-outline-danger"><i class="far fa-trash-alt"></i></i>borrar</a>
+                    </td>
+                </tr>
+                <% }) %>
+                
+            </tbody>
+        </table>
+    </div>         
+            
+            
+
+    
+    <div class="modal fade" id="modal-vehiculo" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-vehiculoLabel">Crear vehiculo</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form id="formVehiculo" required>
+                <div class="modal-body">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="id_vehiculo" name="id_vehiculo" hidden>
+                </div>
+                <div class="form-group">
+                    <label for="id_cliente" class="col-form-label">nombre del propietario:</label>
+                    <select class="form-select" aria-label="Default select example" id="id_cliente" name="id_cliente" required>
+                        <% clientes.forEach(cliente => { %>
+                            <option value="<%= cliente.id_cliente %>"><%= cliente.nombre %></option>
+                        <% }) %>
+                        
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="placa" class="col-form-label">placa</label>
+                    <input type="text" class="form-control" id="placa" name="placa" required>
+                </div>
+                <div class="form-group">
+                    <label for="marca" class="col-form-label">marca</label>
+                    <input type="text" class="form-control" id="marca" name="marca" required>
+                </div>
+                <div class="form-group">
+                    <label for="modelo" class="col-form-label">modelo</label>
+                    <input type="text" class="form-control" id="modelo" name="modelo" required>
+                </div>
+                <div class="form-group">
+                    <label for="color" class="col-form-label">color</label>
+                    <input type="text" class="form-control" id="color" name="color" required>
+                </div>
+
+           
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary close" >Cerrar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>              
+ 
+
+
+
+
+<%- include("../template/footer") %>  
+
+<script src="js/Principal.js"></script>
+  
+<script src="js/Admin_vehiculo.js"></script> 
+

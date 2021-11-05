@@ -1,0 +1,260 @@
+<%- include("template/header", {title:'Servicios'}) %>
+    
+    <link rel="stylesheet" href="css/Servicios.css">
+</head>
+
+<body>
+    <div class="Pagina_Principal">
+        
+        <%- include("template/navbar") %>
+
+        <div class="d-flex align-items-start">
+            <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">SERVICIOS EMBELLECIMIENTO AUTOMOTRIZ</button>
+                <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">SERVICIOS MANTENIMIENTO PREVENTIVO AUTOMOTRIZ</button>
+                <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">SERVICIOS MANTENIMIENTO CORRECTIVO AUTOMOTRIZ</button>
+                <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">SERVICIOS MECÁNICA ESPECIALIZADA</button>
+            </div>
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                    <div class="Mantenimiento" id="Embellecimiento">
+                        <h1>SERVICIOS EMBELLECIMIENTO AUTOMOTRIZ</h1>
+                        <p>El cuidado del auto ahora tiene mucho más en cuenta la pintura, elemento que ha evolucionado y ahora tiene nuevas tecnologías de aplicación y acabados, bicapa y tricapa. Tecnologías que llevan al usuario a pensar en un cuidado especial para evitar costos adicionales por reparaciones de pintura.</p>
+                        <div class="Tarjetas">
+                            <div class="card" style="width: 18rem;">
+                                <img src="img/Embellecimiento_1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">Laminado y pintura</p>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img src="img/Embellecimiento_2.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">Lavado de tapicería</p>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img src="img/Embellecimiento_3.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">Detailing</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                    <div class="Mantenimiento" id="Preventivo">
+                        <h1>SERVICIOS MANTENIMIENTO PREVENTIVO AUTOMOTRIZ</h1>
+                        <p>Según el Centro de Experimentación y Seguridad Vial, la falta de mantenimiento preventivo y correctivo en los vehículos incide en las fallas mecánicas que ocasionan los accidentes en las vías de la ciudad.</p>
+                        <div class="Tarjetas">
+                            <div class="card" style="width: 18rem;">
+                                <img src="img/Preventivo_1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text" id="text_Embellecimiento">
+                                        <h5>Revisión de frenos</h5>
+                                        Pastillas, disco y/o bandas
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img src="img/Preventivo_2.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text" id="text_Embellecimiento">
+                                        <h5>Cambio de líquidos de frenos</h5>
+                                        Níveles correctos para el frenado.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img src="img/Preventivo_3.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text" id="text_Embellecimiento">
+                                        <h5>Cambio de aceite</h5>
+                                        La lubricación del motor es indispensable
+                                    </p>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img src="img/Preventivo_4.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text" id="text_Embellecimiento">
+                                        <h5>Cambio de Kit de Distribución</h5>
+                                        Evite un daño fuerte en su motor.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img src="img/Preventivo_5.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text" id="text_Embellecimiento">
+                                        <h5>Sincronización y puesta punto a punto</h5>
+                                        Optimizar el rendimiento del motor
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img src="img/Preventivo_6.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text" id="text_Embellecimiento">
+                                        <h5>Inspección en la dirección</h5>
+                                        Asegurarse que su dirección esta en optimo estado.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                    <div class="Mantenimiento" id="Correctivo">
+                        <h1>SERVICIOS MANTENIMIENTO CORRECTIVO AUTOMOTRIZ</h1>
+                        <p>Este consiste en encontrar y arreglar los defectos observados en el vehículo que están afectando su funcionamiento y tu seguridad. Lo ideal es reparar estos aspectos antes de que pueda perjudicar el funcionamiento total del vehículo y que quede inservible.</p>
+                        <div class="Tarjetas">
+                            <div class="card" style="width: 18rem;">
+                                <img src="img/Correctivo_1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text" id="text_Embellecimiento">
+                                        <h5>Suspensión</h5>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img src="img/Correctivo_2.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text" id="text_Embellecimiento">
+                                        <h5>Dirección</h5>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img src="img/Correctivo_3.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text" id="text_Embellecimiento">
+                                        <h5>Amortiguadores</h5>
+                                    </p>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img src="img/Correctivo_4.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text" id="text_Embellecimiento">
+                                        <h5>Kit de Embrague</h5>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img src="img/Correctivo_5.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text" id="text_Embellecimiento">
+                                        <h5>Electricidad y electrónica</h5>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img src="img/Correctivo_6.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text" id="text_Embellecimiento">
+                                        <h5>Corrección de fugas</h5>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                    <div class="Mantenimiento" id="Especializada">
+                        <h1>SERVICIOS MECÁNICA ESPECIALIZADA</h1>
+                        <p>
+                            Empresa enfocada en mecánica integral para particulares y empresas con más de 10 años de experiencia. Nuestro objetivo es el servicio a clientes, por ello contamos con el equipo técnico necesario para diagnósticos acertados, recolección a domicilio u oficina y estamos abriendo nuevos canales digitales de comunicación para tu comodidad.</p>
+                        <div class="Tarjetas">
+                            <div class="card" style="width: 18rem;">
+                                <img src="img/Especializada_1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">Reparación de motor</p>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img src="img/Especializada_2.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">Reparación de caja de velocidades</p>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img src="img/Especializada_3.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">Reparación de diferencial</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br> <br>
+        <div class="Publicidad">
+            <h1 class="h1-publicidad">SERVICIOS MÁS SOLÍCITADOS DE NUESTRO TALLER</h1>
+            <p class="p-publicidad">
+                A continuación podrá encontrar nuestra clasificación de servicios para mantener su vehículo en perfecto funcionamiento y además aplicacmos técnicas para que su automóvil permanezcas como nuevo tales como polichados, pintura, latoneria, entre otros.
+            </p>
+            <div class="Img-Letra">
+                <div>
+                    <img src="img/Rojo.png" alt="">
+                </div>
+                <div>
+                    <h1 class="detalles">
+                        <p>1. Servicio escaner y diagnostico</p>
+                        <p>2. Mantenimiento Cajas Mecánicas</p>
+                        <p>3. Revision de frenos</p>
+                        <p>4. Sincronización</p>
+                        <p>5. Correa de reparticion</p>
+                        <p>6. Electricidad automotriz</p>
+                        <p>7. Embellecimiento</p>
+                        <p>8. Latonería y pintura</p>
+                        <p>9. Cambio de bateria</p>
+                        <p>10. Cambio en bombillería</p>
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="Publicidad" id="Video_111">
+            <h1 class="h1-publicidad">VÍDEOS - TALLER DE MECÁNICA AUTOMOTRIZ</h1>
+            <p class="p-publicidad">
+                Puedes mirar algunos de nuestro vídeos y conocer nuestro trabajo.
+            </p>
+            <div class="Publicidad_video">
+                <div>
+                    <video src="img_servicios/Taller_1.mp4" controls></video>
+                </div>
+                <div>
+                    <video src="img_servicios/Taller_2.mp4" controls></video>
+                </div>
+                <div>
+                    <video src="img_servicios/Taller_3.mp4" controls></video>
+                </div>
+            </div>
+        </div>
+        <!---->
+        <div class="cont-princ-slider">
+            <h3>MARCAS QUE NOS RECOMIENDAN</h3><br>
+            <div class="slier-prin">
+                <div class="juegos_DWG">
+                    <img src="img_servicios/logo-nissand.png" alt="">
+                </div>
+                <div class="juegos_DWG">
+                        <img src="img_servicios/logo-bmw1.png" alt="">
+                </div>
+                <div class="juegos_DWG">
+                   <img src="img_servicios/logo-chevrolet1.png" alt="">
+                </div>
+                <div class="juegos_DWG">
+                    <img src="img_servicios/logo-honda0.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!---->
+
+    </div> 
+    <script src="js/Login.js"></script>
+    
+<%- include("template/footer") %>  

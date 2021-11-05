@@ -1,0 +1,41 @@
+<%- include("template/header", {title:'Registro'}) %>
+
+    
+    <link rel="stylesheet" href="css/Registro.css">
+</head>
+
+<body>
+    <div class="Pagina_Principal">
+        <%- include("template/navbar") %>
+
+        <div class="Principal container-fluid">
+            <div class="Aviso">
+                <img src="img/Cliente_Mecanico.jpg" alt="">
+                <div><br>
+                    <h1>Bienvenido</h1>
+                    <p>
+                        porfavor registrate para poder usar nuestros servicios
+                    </p>
+                </div>
+            </div>
+            <div class="Login"><br> 
+                <h3> Ingresa tu solicitud </h3><br> <br>
+                <form id="registro" >
+                    <label for=""><strong>Ingresa tus datos : </strong></label> <br> <br> 
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="emailHelp" placeholder="Nombre" required>
+                        <input type="text" class="form-control" id="cedula" name="cedula" placeholder="Cedula" required>
+                        <input type="text" class="form-control" id="email" name="email" placeholder="Correo electronico" required>
+                        <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Telefono" required>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="contraseña" required>
+                    </div>
+                    <button type="submit"  class="btn btn-dark" > <a class="a">Ingresar</a></button>
+                </form>
+            </div>
+        </div>
+    </div>
+  
+    </div>
+    <script src="js/registro.js"></script>
+
+<%- include("template/footer") %>    

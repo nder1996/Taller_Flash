@@ -1,0 +1,534 @@
+.Pagina_Principal {
+    height: 80%;
+}
+
+
+a {
+    text-decoration: none;
+    color: black !important;
+}
+
+
+.nav {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    font-size: 25px;
+    width: 100%;
+
+
+}
+
+.nav li {
+    margin-left: 35px;
+}
+
+.nav li button {
+    color: black;
+}
+
+.nav li button i {
+    margin-left: 10px;
+}
+
+.Bienvenido {
+    margin-bottom: 80px;
+}
+
+/*----------OPCIONES DE USUARIO-------------------*/
+
+.tab-content {
+    margin-top: 50px;
+}
+
+#pills-1 {
+    height: 100%;
+}
+
+#pills-1 .input {
+    text-align: center;
+    border: 1px solid black;
+
+
+    margin-left: 70px;
+    margin-top: 10px;
+
+}
+
+#pills-1 .input label {
+    font-size: 2vw;
+    margin-bottom: 50px;
+    /*border-bottom: 3px solid red;*/
+    background-color: transparent;
+    padding: 2px;
+    color: black;
+    margin-top: 20px;
+}
+
+#pills-1 .input select {
+    position: relative;
+    margin-bottom: 50px;
+    width: 73%;
+    left: 15%;
+}
+
+#pills-1 .input .btn-Usuario {
+    position: relative;
+    text-align: center;
+    margin-bottom: 50px;
+    left: -33%;
+}
+
+#pills-1 .input .btn-Usuario button {
+    margin-left: 30px;
+}
+
+
+#pills-1 .input #Info {
+    position: relative;
+    border: 1px solid blue;
+    width: 50%;
+    left: 1%;
+    top: -20px;
+}
+
+#pills-1 .container-fluid-1 {
+    border: 0px solid black;
+}
+
+#pills-1 .container-fluid-1 label {
+    position: relative;
+    top: -10px;
+}
+
+
+#pills-1 .Extra {
+    position: relative;
+    top: -25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 0px solid darkred;
+}
+
+#pills-1 .Extra div {
+    width: 20%;
+    border: 2px solid silver;
+    background-color: rgb(248, 249, 250);
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#pills-1 .Extra div:hover {
+    border: 1px solid black;
+}
+
+
+#pills-1 .Extra div .form-check-input {
+    margin-top: 50px;
+}
+
+#pills-1 .Extra div h5 {
+    font-size: 0.9vw;
+    margin-top: 10px;
+}
+
+#pills-1 .Extra div i {
+    font-size: 3vw;
+    margin-bottom: 10px;
+}
+
+#pills-1 .Extra div p {
+    font-size: 0.7vw;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
+#pills-1 button {
+    position: relative;
+    width: 40%;
+    left: 30%;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+
+#pills-2 {
+    text-align: center;
+}
+
+#pills-2 button {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#pills-3 {
+    text-align: center;
+}
+
+#pills-3 table {
+    position: relative;
+    text-align: center;
+}
+
+#pills-3 h1 {
+    position: relative;
+    border-bottom: 5px solid darkred;
+    width: 25%;
+    left: 40%;
+    margin-bottom: 50px;
+}
+
+
+#pills-3 .Extra {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#pills-3 .Extra div {
+    border: 1px solid red;
+    width: 30%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 0px 1px black;
+}
+
+#pills-3 .Extra div h5 {
+    font-size: 1.5vw;
+}
+
+#pills-3 .Extra div i {
+    font-size: 2.5vw;
+    margin-top: 10px;
+}
+
+#pills-3 .Extra div p {
+    font-size: 1vw;
+    margin-top: 20px;
+}
+
+#pills-3 .Extra div button {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+}
+
+#Video_Icono {
+    position: relative;
+    text-align: center;
+    top: 10px;
+
+}
+
+#Video_Icono i {
+    position: relative;
+    font-size: 3vw;
+    padding: 5px;
+}
+
+#myVideo {
+    position: relative;
+    top: 20px;
+    left: 6%;
+}
+
+.btn-close {
+    position: relative;
+    top: -135px;
+}
+
+#btn_1 {
+    position: relative;
+    top: 1px;
+}
+
+
+.text-center a {
+    margin-left: 15px;
+    width: 25%;
+}
+
+
+/*-----------FACTURA-------------*/
+.T-Factura {
+    position: relative;
+    width: 35%;
+    border: 5px solid rgb(248, 249, 250);
+    background-color: rgb(248, 249, 250);
+    border-radius: 10px;
+    left: 29%;
+    height: 100%;
+}
+
+
+.Primera {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.Primera div {
+    margin-top: 15px;
+    border: none;
+}
+
+.Primera .div_1 {
+    position: relative;
+    left: 1%;
+
+}
+
+.Primera .div_1 img {
+    width: 120%;
+    height: 120px;
+}
+
+.Primera .div_2 {
+    position: relative;
+    border: 0;
+    margin-left: 140px;
+    /*color: ;*/
+    width: 49%;
+    left: 10%;
+}
+
+.Primera .div_2 table {
+    position: relative;
+    border: none;
+    width: 140%;
+    top: -17px;
+    left: -35%;
+    margin-top: 5px;
+
+}
+
+.Primera .div_2 table td {
+    font-size: 13px;
+    border: 1px solid transparent;
+}
+
+.Segundo {
+    display: flex;
+    border-bottom: 3px solid darkgoldenrod;
+    padding: 10px;
+    font-size: 22px;
+}
+
+.Segundo .div_1 {
+    position: relative;
+    left: -12%;
+    /*color: gray;*/
+    font-weight: bold;
+}
+
+.Segundo .div_2 {
+    font-weight: bold;
+    color: black;
+}
+
+.Segundo div {
+    width: 50%;
+
+}
+
+.Segundo .div_2,
+.Tercera .div_2 {
+    text-align: right;
+}
+
+.Tercera {
+    position: relative;
+    text-align: left;
+    display: flex;
+    left: -2%;
+    margin-left: 25px;
+}
+
+.Tercera div {
+    width: 50%;
+    text-transform: capitalize;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.Tercera .div_2 {
+    border: 2px solid transparent;
+    position: relative;
+    text-align: left;
+    color: black;
+    width: 52%;
+    left: 2%;
+
+}
+
+.Tercera .div_2 table {
+    position: relative;
+    border: 2px solid transparent;
+    width: 100%;
+
+}
+
+.Tercera .div_2 table td {
+    /*border: 5px solid black;*/
+    border: 1px solid transparent;
+}
+
+.Tercera .Total {
+    background-color: dimgrey;
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+.Cuarto {
+
+    display: flex;
+}
+
+.Cuarto div {
+    font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+    text-align: center;
+    width: 48%;
+    margin-left: 10px;
+}
+
+.Descripcion {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.Descripcion div {
+    position: relative;
+    text-align: center;
+
+    margin-top: 10px;
+    width: 48%;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.Sub_Total {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    text-align: center;
+    left: 60%;
+    margin-top: 10px;
+    width: 40%;
+}
+
+
+.Sub_Total td {
+
+    width: 5%;
+}
+
+.Sub_Total .title-factura {
+    background-color: dimgrey;
+    color: white;
+}
+
+/*-----------FACTURA-------------*/
+
+table {
+    border: 0;
+}
+
+table tr {
+    border: 0;
+}
+
+#td_editar a {
+    width: 50%;
+    margin-top: 10px;
+    color: white !important;
+}
+
+.Bienvenido {
+    position: relative;
+    left: -13%;
+    margin-bottom: 20px;
+}
+
+.Bienvenido h1 {
+    text-transform: capitalize;
+
+}
+
+/*--------MODAL VIDEO-------------*/
+
+.btn-close {
+    position: relative;
+    top: 2px;
+    font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+}
+
+.modal-body {
+    /*  border: 5px solid black;*/
+}
+
+.modal-header {
+    text-transform: capitalize;
+}
+
+
+.modal-body #myVideo {
+    position: relative;
+    /* border: 5px solid red;*/
+    left: 1%;
+    top: 2px;
+}
+
+
+.P_Factura {
+    position: relative;
+    left: -4%;
+}
+
+
+.Pago div table {
+    width: 130%;
+     border: 10px solid transparent;
+
+}
+
+.Pago div table tr {
+    display: flex;
+     border: 10px solid transparent;
+
+}
+
+.Pago div table tr td input {
+    width: 130%;
+    outline: none;
+    text-decoration: none;
+    margin-top: 25px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+
+}
+
+.modal-body {
+    display: flex;
+}
+
+.modal-body div img {
+    position: relative;
+    left: 35%;
+    top: 30px;
+}
+
+.modal-header button{
+    position: relative;
+    top: -25px;
+}

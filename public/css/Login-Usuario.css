@@ -1,0 +1,172 @@
+.Pagina_Principal {
+    height: 800px;
+
+}
+
+.Principal {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*border: 5px solid black;*/
+    justify-content: center;
+    height: 400px;
+    /*background-color: rgb(0,0,0,0.9);*/
+    margin-top: 100px;
+}
+
+.Principal .Login {
+    box-shadow: 0 0 0 2px black;
+    background-color: white;
+    width: 33%;
+    height: 490px;
+}
+
+.Principal .Aviso {
+    position: relative;
+    box-shadow: 0 0 0 2px black;
+    width: 43%;
+    height: 490px;
+
+
+}
+
+.Principal .Aviso div {
+    position: relative;
+    color: white;
+    top: -350px;
+}
+
+.Principal .Aviso div h1 {
+    position: relative;
+    font-weight: bold;
+    font-size: 6vw;
+    width: 80%;
+    top: -90px;
+    left: 12%;
+}
+
+.Principal .Aviso div p {
+    position: relative;
+    justify-content: justify;
+    color: white;
+    width: 70%;
+    font-weight: bold;
+    left: 19%;
+    top: -30px;
+}
+
+.Principal .Aviso img {
+    height: 490px;
+    width: 100%;
+    filter: blur(8px);
+    filter: brightness(50%);
+}
+
+.Principal .Aviso a {
+    position: relative;
+    left: 38%;
+    top: 30px;
+
+}
+
+
+
+.Principal .Login {
+    position: relative;
+    text-align: center;
+    width: 38%;
+}
+
+.Principal .Login h3 {
+    font-weight: bold;
+    font-size: 3vw;
+}
+
+.Principal .Login input {
+    position: relative;
+    width: 63%;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    left: 15%;
+    margin-bottom: 85px;
+}
+
+.Principal .Login button {
+    border-radius: 10px;
+    width: 20%;
+}
+
+.Principal .Login button a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.Registro_Ico {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin-top: 28px;
+    left: -42%;
+
+}
+
+
+.Registro_Ico a{
+    position: relative;
+    text-decoration: none;
+	color:white;
+    text-align: center;
+    border: 1px solid white;
+    width: 22%;
+    height: 130px;
+    top: 290px;
+    background-color: rgb(0, 0, 0, 0.5);
+    margin-left: 35px;
+    left: 13%;
+    font-size: 25px;
+
+}
+
+.Registro_Ico a:hover{
+    -webkit-box-shadow: 10px 10px 14px 2px rgba(0, 0, 0, 0.47);
+    box-shadow: 10px 10px 14px 2px rgba(0, 0, 0, 0.47);
+}
+
+.Registro_Ico a i {
+    font-size: 35px;
+    margin-bottom: 45px;
+    margin-top: 12px;
+
+}
+
+.Registro_Ico a p {
+    font-size: 13px;
+    margin: 0;
+    width: 100%;
+
+}
+
+
+/*
+
+
+.Registro_Ico a p {
+    font-size: 12px;
+    margin: 0;
+    width: 100%;
+
+}
+
+.Registro_Ico section #registro_1{
+	position: relative;
+	
+	left:2%;
+	top: -5px;
+}

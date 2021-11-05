@@ -1,0 +1,278 @@
+<%- include("../template/header", {title:'Admin'}) %>
+    
+    <link rel="stylesheet" href="css/Admin.css">
+</head>
+
+<body>
+    <div class="Pagina_Principal">
+
+        <%- include("../template/navbar") %>
+        <div class="Principal container-fluid">
+            <br> 
+            <ul class="nav-p nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-1" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Administrar Datos de Vehiculos&nbsp;&nbsp;<i class="fas fa-car"></i></button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-2" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Administrar Datos de Clientes&nbsp;&nbsp;<i class="fas fa-users"></i></button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-3" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Generar Facturas&nbsp;&nbsp;<i class="fas fa-print"></i></button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-5" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Administrar Datos de Empleado Mecanico&nbsp;&nbsp;<i class="fas fa-user-cog"></i></button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-6" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Solicitudes&nbsp;&nbsp;<i class="fas fa-clipboard-list"></i></button>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <a href="/create" class="btn btn-success mb-2 "> añadir </a>
+                    <table id="Admin-Clientes" class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">NÚMERO DE PLACA DEL VEHÍCULO</th>
+                                <th scope="col">MARCA DEL VEHÍCULO</th>
+                                <th scope="col">MODELO</th>
+                                <th scope="col">COLOR</th>
+                                <th scope="col">NOMBRE DEL VEHÍCULO</th>
+                                <th scope="col">CÓDIGO DEL VEHÍCULO</th>
+                                <th scope="col">VIDEO INGRESO</th>
+                                <th scope="col">DIAGNÓSTICO DEL VEHÍCULO</th>
+                                <th scope="col">CALENDARIO DE REPARACIÓN</th>
+                                <th scope="col">ACCIONES</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1F51S2</th>
+                                <th>Ford</th>
+                                <td>C-Max</td>
+                                <td>Rojo</td>
+                                <td>Ford C-Max</td>
+                                <td>253QW5lPO</td>
+                                <td>
+                                    <div class="modal fade" id="Video_1" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalToggleLabel">Video Filmado en el taller</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <video id="myVideo" width="420" height="276" controls>
+                                                        <source src="img/Mantenimiento preventivo vehículo.mp4" type="video/mp4">
+                                                    </video>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="btn btn-primary bg-success" data-bs-toggle="modal" href="#Video_1" role="button"><i class="fas fa-video"></i></a>
+                                </td>
+                                <td><i class="fas fa-paste"></i></td>
+                                <td><i class="far fa-calendar-alt"></i></td>
+                                <td class="text-center"><a class="btnEditar btn btn-primary" id="editar_usuario">Editar</a><a class="btnBorrar btn btn-danger" id="borrar_usuario">Eliminar</a>
+                                    <a class="btnBorrar btn btn-success" id="borrar_usuario">Enviar Informe</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">12VRG</th>
+                                <th scope="col">Honda</th>
+                                <td>Honda Jazz</td>
+                                <td>Negro</td>
+                                <td>HONDA JAZZ 1.5 I-MMD HEV ELEGANCE</td>
+                                <td>2535lPO</td>
+                                <td>
+                                    <div class="modal fade" id="Video_2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalToggleLabel">Video Filmado en el taller</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <video id="myVideo" width="420" height="276" controls>
+                                                        <source src="img/Experto en tu Auto Consejos para el mantenimiento preventivo de un auto.mp4" type="video/mp4">
+                                                        Your browser does not support HTML5 video.
+                                                    </video>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="btn btn-primary bg-success" data-bs-toggle="modal" href="#Video_2" role="button"><i class="fas fa-video"></i></a>
+                                </td>
+                                <td><i class="fas fa-paste"></i></td>
+                                <td><i class="far fa-calendar-alt"></i></td>
+                                <td class="text-center"><a class="btnEditar btn btn-primary" id="editar_usuario">Editar</a><a class="btnBorrar btn btn-danger" id="borrar_usuario">Eliminar</a>
+                                    <a class="btnBorrar btn btn-success" id="borrar_usuario">Enviar Informe</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">CÉDULA</th>
+                                <th scope="col">NOMBRE</th>
+                                <th scope="col">APELLIDO</th>
+                                <th scope="col">CORREO ELECTRÓNICO</th>
+                                <th scope="col">ACCIONES</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>12547512</th>
+                                <th>Juan Pablo</th>
+                                <td>Perez Quesada</td>
+                                <td>Juan@gmail.com</td>
+                                <td>Juan_123</td>
+                                <td class="text-center"><a class="btnEditar btn btn-primary" id="editar_usuario">Editar</a><a class="btnBorrar btn btn-danger" id="borrar_usuario">Eliminar</a></td>
+                            </tr>
+                            </tr>
+                            <tr>
+                                <th scope="row">121544124</th>
+                                <th scope="col">Luis Jaime</th>
+                                <td>Calderon Obrego</td>
+                                <td>Jaime@hotmail.com</td>
+                                <td>Foca_123</td>
+                                <td class="text-center"><a class="btnEditar btn btn-primary" id="editar_usuario">Editar</a><a class="btnBorrar btn btn-danger" id="borrar_usuario">Eliminar</a></td>
+                            </tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="Factura tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    <div class="d-flex align-items-start">
+                        <div class="Factura-Codigo nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                            <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Cliente : 1 <br> Codigo del vehiculo : 2535lPO</button>
+                            <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Cliente : 2 <br> Codigo del vehiculo : 253QW5lPO</button>
+                            <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Cliente : 3 <br> Codigo del vehiculo : 2535lPWRFO</button>
+                            <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Cliente : 4 <br> Codigo del vehiculo : 2535lSDDFPO</button>
+                        </div>
+                        <div class="Contenido_Factura tab-content" id="v-pills-tabContent">
+                            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                <form>
+                                    <label for="">¿CUÁL FUE EL SERVICIO QUE UTILIZO EL CLIENTE?</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected></option>
+                                        <option value="1">Código : 12547SD - Mantenimiento preventivo de automóviles</option>
+                                        <option value="2">Código : 12517SD - Mantenimiento correctivo de vehículos</option>
+                                        <option value="3">Código : 92D47SM - Mecánica especializada para vehículos</option>
+                                        <option value="4">Código : 124DFSD - Embellecimiento automotriz</option>
+                                    </select>
+                                    <label for="">¿UTILIZÓ UN MANTENIMIENTO ADICIONAL?</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected></option>
+                                        <option value="1">Código : 2DAF7SDF - Electronica</option>
+                                        <option value="2">Código : 2DAF7SD1 - Mecanica</option>
+                                        <option value="3">Código : 2DAF7SDA - Inyeccion</option>
+                                        <option value="4">Código : 2DAF7SDQ - Suspension</option>
+                                        <option value="5">Código : 2DAF7SDH - Encendido</option>
+                                        <option value="6">Código : 2DAF7SDV - Tren Delantero</option>
+                                        <option value="7">Código : 2DAF7SDJ - Frenos</option>
+                                        <option value="8">Código : 2DAF7SDH - Climatizacion</option>
+                                    </select>
+                                    <label for="exampleFormControlTextarea1" class="form-label">Si Existe , enumerelos los daños que sufrio el vehiculo en el taller</label>
+                                    <textarea class="form-control" id="Textarea_1" rows="3"></textarea>
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlTextarea1" class="form-label">Si Existe gastos adiccionales , enumerelos con su codigo</label>
+                                        <textarea class="form-control" id="Textarea_2" rows="3"></textarea>
+                                    </div>
+                                    <div class="Boton">
+                                        <button type="button" class="btn btn-success">Generar Factura</button>
+                                        <button type="button" class="btn btn-secondary">Ver Diagnostico</button>
+                                        <button type="button" class="btn btn-dark">Contactar Con El cliente</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-5" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    <button type="button" class="btn btn-success" id="Agregar_Empleado">Agregar Empleado</button> <br>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">CÉDULA</th>
+                                <th scope="col">NOMBRE</th>
+                                <th scope="col">APELLIDO</th>
+                                <th scope="col">CORREO ELECTRÓNICO</th>
+                                <th scope="col">CÓDIGO DE EMPLEADO</th>
+                                <th scope="col">DISPONIBILIDAD</th>
+                                <th scope="col">ACCIONES</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">12547512</th>
+                                <th scope="col">Juan Pablo</th>
+                                <td>Perez Quesada</td>
+                                <td>Juan@gmail.com</td>
+                                <td>SFG5ASF4G5</td>
+                                <td>Está disponible</td>
+                                <td class="text-center"><a class="btnEditar btn btn-primary" id="editar_usuario">Editar</a><a class="btnBorrar btn btn-danger" id="borrar_usuario">Eliminar</a>
+                                </td>
+                            </tr>
+                            </tr>
+                            <tr>
+                                <th scope="row">121544124</th>
+                                <th scope="col">Luis Jaime</th>
+                                <td>Calderon Obrego</td>
+                                <td>Jaime@hotmail.com</td>
+                                <td>5AS45F4E</td>
+                                <td>No está disponible</td>
+                                <td class="text-center"><a class="btnEditar btn btn-primary" id="editar_usuario">Editar</a><a class="btnBorrar btn btn-danger" id="borrar_usuario">Eliminar</a></td>
+                            </tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-pane fade" id="pills-6" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    <a href="/create" class="btn btn-success mb-2 "> añadir solicitud presencial</a>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">CÓDIGO DE LA SOLICITUD</th>
+                                <th scope="col">CÉDULA DEL SOLICITANTE</th>
+                                <th scope="col">FORMULARIO</th>
+                                <th scope="col">SOLICITUD DE INGRESO</th>
+                                <th scope="col">EL VEHÍCULO PUEDE INGRESAR</th>
+                                <th scope="col">ACCIONES</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">12547512</th>
+                                <th scope="col">6556565</th>
+                                <td class="icono"><i class="far fa-clipboard"></i></td>
+                                <td>Formulario Presencial</td>
+                                <td>NO PUEDE INGRESAR</td>
+                                <td class="text-center1"><a class="btnEditar btn btn-primary" id="editar_usuario">Editar</a><a class="btnBorrar btn btn-danger" id="borrar_usuario">Eliminar</a>
+                                    <a class="btnBorrar btn btn-secondary" id="borrar_usuario">Enviar Infome</a>
+                                </td>
+                            </tr>
+                            </tr>
+                            <tr>
+                                <th scope="row">121544124</th>
+                                <th scope="col">54484455</th>
+                                <td class="icono"><i class="far fa-clipboard"></i></td>
+                                <td>Formulario Virtual</td>
+                                <td>PUEDE INGRESAR</td>
+                                <td class="text-center1"><a class="btnEditar btn btn-primary" id="editar_usuario">Editar</a><a class="btnBorrar btn btn-danger" id="borrar_usuario">Eliminar</a>
+                                    <a class="btnBorrar btn btn-secondary" id="borrar_usuario">Enviar Infome</a>
+                                </td>
+                            </tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!---->
+            </div>
+            <br> <br>
+        </div>
+    </div>   
+    <script src="js/Principal.js"></script>
+    <%- include("../template/footer") %>    

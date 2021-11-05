@@ -1,0 +1,238 @@
+<%- include("template/header", {title:'Cliente'}) %>
+<link rel="stylesheet" href="css/Cliente.css">
+</head>
+
+<body>
+    <div class="Pagina_Principal">
+        <%- include("template/navbar") %>
+        <div class="Principal container-fluid">
+            <br> <br><br> <br>
+            <div class="Bienvenido container">
+                <h1 class="title">bienvenido <%= nombre %> !</h1>
+            </div>
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-1-tab" data-bs-toggle="pill" data-bs-target="#pills-1" type="button" role="tab" aria-controls="pills-home" aria-selected="true">¿DESEAS HACER ALGO A TU VEHÍCULO?<i class="far fa-question-circle"></i></button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-2-tab" data-bs-toggle="pill" data-bs-target="#pills-2" type="button" role="tab" aria-controls="pills-home" aria-selected="false">MI FACTURA<i class="fas fa-print"></i></button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-3-tab" data-bs-toggle="pill" data-bs-target="#pills-3" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">MI DIAGNÓSTICO AUTOMOTRIZ<i class="far fa-newspaper"></i></button>
+                </li>
+                
+            </ul>
+
+
+
+
+
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab">
+                    <div class="input">
+                        <label for="">¿Qué tipo de mantenimiento deseas hacer?</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected></option>
+                            <option value="1">Mantenimiento preventivo de automoviles</option>
+                            <option value="2">Mantenimiento correctivo de vehículos</option>
+                            <option value="3">Mecánica especializada para vehículos</option>
+                            <option value="4">Embellecimiento automotriz</option>
+                        </select>
+                        <div class="btn-Usuario">
+                            <button type="button" class="btn btn-danger">Cancelar Mantenimiento</button>
+                            <button type="button" class="btn btn-success">Seleccionar Mantenimiento</button>
+                        </div>
+                        <button type="button" class="btn btn-light" id="Info"><a href="/servicios" target="_blank">¿En que consiste estos Mantenimiento?</a></button>
+                    </div>
+                    <div class="input container-fluid-1">
+                        <label for="">¿Deseas hacer un mantenimiento extra?</label>
+                        <div class="Extra">
+                            <div>
+                                <br>
+                                <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                                <h5>ELECTRÓNICA</h5>
+                                <i class="fas fa-car-battery"></i>
+                                <p>
+                                    Diagnóstico de sistemas electrónicos <br>
+                                    Electricidad <br>
+                                    Baterías <br>
+                                </p>
+                            </div>
+                            <div><br>
+                                <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                                <h5>MECÁNICA</h5>
+                                <i class="fas fa-screwdriver"></i>
+                                <p>
+                                    Mecánica Ligera y de motor <br>
+                                    Filtros y Correas <br>
+                                    Cambio de aceite <br>
+                                    Embrague/ Caja de velocidades <br>
+                                    Cambio de fluidos <br>
+                                </p>
+                            </div>
+                            <div><br>
+                                <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                                <h5>INYECCIÓN</h5>
+                                <i class="fas fa-oil-can"></i>
+                                <p>
+                                    Inyección de nafta <br>
+                                    Inyección diesel (Diagnóstico) <br>
+                                    Limpieza y calibración de inyectores <br>
+                                </p>
+                            </div>
+                            <div><br>
+                                <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                                <h5>SUSPENSIÓN</h5>
+                                <i class="fas fa-car-crash"></i>
+                                <p>
+                                    Cambio de amortiguadores <br>
+                                    Cambio de bujes <br>
+                                    Parrilla de suspensión <br>
+                                </p>
+                            </div>
+                            <div><br>
+                                <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                                <h5>ENCENDIDO</h5>
+                                <i class="fas fa-bolt"></i>
+                                <p>
+                                    Cambio de bujías <br>
+                                    Bobinas de encendido <br>
+                                    Cables de bujías <br>
+                                </p>
+                            </div>
+                            <div><br>
+                                <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                                <h5>TREN DELANTERO</h5>
+                                <i class="fas fa-magnet"></i>
+                                <p>
+                                    Alineación y balanceo <br>
+                                    Caja de dirección hidráulica <br>
+                                    Tren trasero <br>
+                                    Neumáticos <br>
+                                </p>
+                            </div>
+                            <div><br>
+                                <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                                <h5>FRENOS</h5>
+                                <i class="fas fa-arrows-alt-v"></i>
+                                <p>
+                                    Cambio de pastillas <br>
+                                    Cambio de discos de freno <br>
+                                    Cambio de cilíndros <br>
+                                    Bombas de freno <br>
+                                    Módulo ABS <br>
+                                </p>
+                            </div>
+                            <div><br>
+                                <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                                <h5>CLIMATIZACIÓN</h5>
+                                <i class="fas fa-globe"></i>
+                                <p>
+                                    Aire acondicionado <br>
+                                    Cambio de radiadores <br>
+                                    Carga de freón <br>
+                                    Reparación de A/C <br>
+                                </p>
+                            </div>
+                            <div><br>
+                                <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                                <h5>ACCESORIOS</h5>
+                                <i class="fas fa-clipboard-check"></i>
+                                <p>
+                                    Escobillas <br>
+                                    Sistemas de escape <br>
+                                    Polarizado | Tratamiento teflón <br>
+                                    Limpieza de tapizados <br>
+                                    Sacabollos <br>
+                                </p>
+                            </div>
+                            <button type="button" class="btn btn-success">Seleccionar Mantenimiento</button>
+                        </div>
+                    </div>
+                    <!---->
+                </div>
+                <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab">
+                    <img src="img/Factura-Compra.jpg" alt="">
+                    <div>
+                        <button type="button" class="btn btn-success">Pagar Factura</button>
+                        <button type="button" class="btn btn-secondary">Verificar Factura</button>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-3-tab">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col"># de reparacion</th>
+                                <th scope="col">NOMBRE Y PLACA DEL VEHICULO</th>
+                                <th scope="col">TIPO DE REPARACION</th>
+                                <th scope="col">DESCRIPCION REPARACION</th>
+                                <th scope="col">ESTADO DEL VEHICULO:</th>
+                                <th scope="col">PRECIO</th>
+                                <th scope="col">MI VIDEO DE INGRESO</th>
+                                <th scope="col">REALIZAR REPARACIÓN</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% reparaciones.forEach(reparacion => { %>
+                            <tr>
+                                <th scope="row"><%= reparacion.id_reparacion %></th>
+                                <th scope="col"><%= vehiculos[reparacion.id_vehiculo] %></th>
+                                <td><%= reparacion.descripcion_reparacion %></td>
+                                <td>descripcion</td>
+                                <td><%= reparacion.estado_reparacion %></td>
+                                <td>50$</td>
+                                <td><i class="far fa-calendar-alt"></i></td>
+                                <td class="text-center"><a class="btnEditar btn btn-primary" id="editar_usuario">SI</a><a class="btnBorrar btn btn-danger" id="borrar_usuario">NO</a></td>
+                            </tr>
+                            <% }) %>
+                            
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br> <br>
+                    <h1>Recomendaciones</h1>
+                    <div class="Extra">
+                        <div><br>
+                            <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                            <h5>CLIMATIZACIÓN</h5>
+                            <i class="fas fa-globe"></i>
+                            <p>
+                                Aire acondicionado <br>
+                                Cambio de radiadores <br>
+                                Carga de freón <br>
+                                Reparación de A/C <br>
+                            </p>
+                        </div>
+                        <div><br>
+                            <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                            <h5>FRENOS</h5>
+                            <i class="fas fa-arrows-alt-v"></i>
+                            <p>
+                                Cambio de pastillas <br>
+                                Cambio de discos de freno <br>
+                                Cambio de cilíndros <br>
+                                Bombas de freno <br>
+                                Módulo ABS <br>
+                            </p>
+                        </div>
+                        <div><br>
+                            <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                            <h5>TREN DELANTERO</h5>
+                            <i class="fas fa-magnet"></i>
+                            <p>
+                                Alineación y balanceo <br>
+                                Caja de dirección hidráulica <br>
+                                Tren trasero <br>
+                                Neumáticos <br>
+                            </p>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-success">Seleccionar Mantenimiento</button> <br> <br>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="js/Login.js"></script>
+
+    <%- include("template/footer") %> 

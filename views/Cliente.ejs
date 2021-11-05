@@ -1,0 +1,356 @@
+<%- include("template/header", {title:'Cliente'}) %>
+<link rel="stylesheet" href="css/Cliente.css">
+</head>
+
+<body>
+    <div class="Pagina_Principal">
+        <%- include("template/navbar") %>
+        <div class="Principal container-fluid">
+            <br> <br><br> <br>
+            <div class="Bienvenido container">
+                <h1 class="title">Bienvenido
+                    <%= nombre %>
+                </h1>
+            </div><br><br> <br>
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-1-tab" data-bs-toggle="pill" data-bs-target="#pills-1" type="button" role="tab" aria-controls="pills-home" aria-selected="true">REPARACIONES DISPONIBLE<i class="far fa-check-circle"></i></button>
+                </li>
+                <% if (validadorfactura) { %>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-2-tab" data-bs-toggle="pill" data-bs-target="#pills-2" type="button" role="tab" aria-controls="pills-home" aria-selected="false">MI FACTURA #1<i class="fas fa-print"></i></button>
+                </li>
+                <% } %>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-3-tab" data-bs-toggle="pill" data-bs-target="#pills-3" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">MI DIAGNÓSTICO AUTOMOTRIZ<i class="far fa-newspaper"></i></button>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab">
+                    <div class="input container-fluid-1">
+                        <div class="Extra">
+                            <div>
+                                <br>
+                                <h5>SERVICIOS EMBELLECIMIENTO AUTOMOTRIZ</h5> <br>
+                                <i class="fas fa-magic"></i> <br>
+                                <p>
+                                    Laminado y pintura <br>
+                                    Lavado de tapicería <br>
+                                    Detailing <br>
+                                </p>
+                            </div>
+                            <div><br>
+                                <h5>SERVICIOS MANTENIMIENTO PREVENTIVO AUTOMOTRIZ</h5><br>
+                                <i class="far fa-file-powerpoint"></i>
+                                <p>
+                                    Revisión de frenos <br>
+                                    Cambio de líquidos de frenos <br>
+                                    Cambio de aceite <br>
+                                    Cambio de Kit de Distribución <br>
+                                    Sincronización y puesta punto a punto <br>
+                                    Inspección en la dirección <br>
+                                </p>
+                            </div>
+                            <div><br>
+                                <h5>SERVICIOS MANTENIMIENTO CORRECTIVO AUTOMOTRIZ</h5><br>
+                                <i class="fas fa-balance-scale-right"></i>
+                                <p>
+                                    Suspensión <br>
+                                    Dirección <br>
+                                    Amortiguadores <br>
+                                    Kit de Embrague <br>
+                                    Electricidad y electrónica <br>
+                                    Corrección de fugas <br>
+                                </p>
+                            </div>
+                            <div><br>
+                                <h5>REPARACIÓN DE MOTOR</h5><br><br><br>
+                                <i class="fas fa-cogs"></i>
+                                <p style="text-align:justify">
+                                    Autorizar el diagnóstico de la rectificadora. Usualmente lleva entre 6-8hs. Se obtiene el resultado de la rectificadora y se repara el motor.
+                                </p>
+                            </div>
+                            <div><br>
+                                <h5>REPARACIÓN DE CAJA DE VELOCIDADES</h5><br>
+                                <i class="fas fa-bolt"></i>
+                                <p style="text-align:justify">
+                                    Para el mantenimiento de las cajas de cambios contamos con un amplio catálogo de lubricantes.
+                                </p>
+                            </div>
+                            <div><br>
+                                <h5>REPARACIÓN DEL AIRE ACONDICIONADO</h5><br>
+                                <i class="fab fa-airbnb"></i>
+                                <p style="text-align:justify">
+                                    Para reparar el aire acondicionado del coche, primero hay que saber de dónde procede el problema. Lo primero consiste en detectar los síntomas activando el aire con el motor encendido. Es necesario prestar atención a posibles ruidos: si al encender el aire acondicionado se escuchan vibraciones extrañas.
+                                </p>
+                            </div>
+                            <div><br>
+                                <h5>REPARACIÓN DEL TUBO DE ESCAPE</h5><br>
+                                <i class="fas fa-vial"></i>
+                                <p style="text-align:justify">
+                                    Para la reparación del tubo de escape, además del kit de reparación, son necesarios otros elementos suplementarios: un gato, guantes de goma, una lija y un cepillo. Primero es preciso echar el freno de mano y elevar el coche con la ayuda del gato hidráulico para que sea más fácil trabajar debajo del coche
+                                </p>
+                            </div>
+                            <div><br>
+                                <h5>REPARACIÓN ELECTRÓNICA AUTOMOTRIZ</h5><br>
+                                <i class="fas fa-charging-station"></i>
+                                <p style="text-align:justify">
+                                    Los circuitos eléctricos automotrices y los cableados defectuosos son la causa de la mayoría de los problemas eléctricos intermitentes que se dan en un vehículo. Pero siempre es mejor revisar bien y rectificar, antes de atribuir el problema a un componente o al conjunto del cableado
+                                </p>
+                            </div>
+                            <div><br>
+                                <h5>REPARACIÓN MECÁNICA AUTOMOTRIZ</h5>
+                                <i class="fas fa-wrench"></i>
+                                <p>
+                                    La reparación es un proceso que consiste básicamente en diagnosticar y corregir el fallo presente en el vehículo, para llevar a cabo esta labor se requiere experiencia y conocimientos de su estructura, componentes y funcionamiento.
+                                </p>
+                            </div>
+                            <div><br>
+                                <h5>REPARACIÓN DE LA BOMBA DE INYECCIÓN DIÉSEL</h5>
+                                <i class="fas fa-oil-can"></i>
+                                <p>
+                                    Se produce una pérdida de presión cuando el aire entra en las líneas de combustible de una bomba de inyección diésel,Purgar el sistema de combustible de aire y verificar si hay fugas en las líneas. Reemplazar las líneas si es necesario. Generalmente se corrige el problema.
+                                </p>
+                            </div>
+                            <div><br>
+                                <h5>REPARACIÓN DE SUSPENSIÓN</h5>
+                                <i class="fab fa-phabricator"></i>
+                                <p>
+                                    Los componentes de la suspensión de su carro sufren al igual que otros de desgastes en sus prestaciones de flexibilidad y amortiguación, igualmente en sus barras de estabilidad. Con el tiempo se hace necesario que en promedio cada 20.000 kilómetro se revise y genere un mantenimiento preventivo,
+                                </p>
+                            </div>
+                            <div><br>
+                                <h5>REPARACIÓN DEL SISTEMA DE ENCENDIDO CONVENCIONAL</h5>
+                                <i class="fas fa-power-off"></i> <br>
+                                <p>
+                                    e trata de un tipo de transformador eléctrico que eleva el voltaje de la batería (que no suele superar los 12 voltios) a los miles de voltios necesarios para poder pasar a la bujía, inflamar la mezcla de aire y combustible y finalmente arrancar el motor.
+                                </p>
+                            </div>
+                            <div><br>
+                                <h5>REPARACIÓN DE TREN DELANTERO</h5> <br>
+                                <i class="fas fa-peace"></i><br>
+                                <p>
+                                    El grupo de piezas que llamamos tren delantero o ensamblaje frontal incluye tanto el sistema de dirección como el sistema de suspensión del vehículo. La estructura debe ser hermética, sólida y segura, con componentes metálicos y blandos en buenas condiciones.
+                                </p>
+                            </div>
+                            <div><br>
+                                <h5>REPARACIÓN DE FRENOS</h5> <br>
+                                <i class="far fa-hand-paper"></i>
+                                <p>
+                                    Para encontrar el problema, en primer lugar se debe hablar con el conductor del coche. A través de lo que él diga se puede localizar qué necesita ser reparado.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--hasta aqui negro-->
+                </div>
+                <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab">
+                    <div class="T-Factura">
+                        <% if (validadorfactura) { %>
+                        <div class="facturas">
+                            <section class="Primera">
+                                <div class="div_1">
+                                    <img src="img/Logo.png" alt="">
+                                </div>
+                                <div class="div_2">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <i class="fas fa-map-marker-alt"></i>
+                                            </td>
+                                            <td>
+                                                Calle 166 # 54-39 <br> Bogotá - Colombia
+                                            </td>
+                                            <td>
+                                                <i class="fas fa-phone-alt"></i>
+                                            </td>
+                                            <td>
+                                                +57 000 0000 <br>+57 000 0000
+                                            </td>
+                                            <td>
+                                                <i class="fas fa-globe"></i>
+                                            </td>
+                                            <td>
+                                                www.TheFlash.com
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </section> <br> <br>
+                            <section class="Segundo">
+                                <div class="div_1">DESTINATARIO</div>
+                                <div class="div_2">FACTURA</div>
+                            </section> <br> <br>
+                            <section class="Tercera">
+                                <div class="div_1">
+                                    <p>
+                                        <%= factura.nombre_cliente %>
+                                    </p>
+                                    <p>
+                                        <%= factura.nombre_vehiculo %>
+                                    </p>
+                                </div>
+                                <div class="div_2">
+                                    <table>
+                                        <tr>
+                                            <td>N° Factura</td>
+                                            <td>#
+                                                <%= factura.id_factura %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Fecha de factura</td>
+                                            <td>
+                                                <%= factura.fecha_generacion %>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table class="Total">
+                                        <tr>
+                                            <td>TOTAL</td>
+                                            <td>
+                                                $<%= factura.costo_total %> dolares</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </section> <br> <br>
+                            <section class="Cuarto">
+                                <div class="div_1">TIPO DE REPARACION</div>
+                                <div class="div_2">PRECIO x REPARACION</div>
+                            </section><br>
+                            <% reparaciones_pendientes.forEach(reparacion => { %>
+                            <section class="Descripcion">
+                                <div class="descripcion_Nombre">
+                                    <%= reparacion.descripcion_reparacion %>
+                                </div>
+                                <div class="descripcion_Precio">
+                                    <%= arrprecio[reparacion.descripcion_reparacion] %>$ </div>
+                            </section> <br>
+                            <% }) %>
+                        </div>
+                        <% } %>
+                    </div>
+                    <div class="P_Factura">
+                        <!-- Vertically centered modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Pagar Factura</button>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title" id="exampleModalLabel" style="position: relative; left:40px;">MÉTODOS DE PAGO</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="Pago">
+                                            <div class="mb-3">
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="text" placeholder="Nombre Completo" required>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="text" placeholder="Numero De Tarjeta" required>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <td>
+                                                            <input type="text" placeholder="Fecha de Vencimiento" required>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <td>
+                                                            <input type="text" placeholder="CVV" required>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </form>
+                                        <div>
+                                           <img src="img/Visa.png" alt="" width="200px" height="200px">
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                        <% if (locals.factura) { %>
+                                            <button type="button" onclick="pagarfactura('<%= factura.id_factura %>')" class="btn btn-primary">Pagar</button>
+                                        <% } %>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-3-tab">
+                    <table id="tablacliente" class="table table-bordered">
+                        <thead style="background-color:Silver; color:White">
+                            <tr>
+                                <th scope="col"># DE REPARACIÓN</th>
+                                <th scope="col">NOMBRE Y PLACA DEL VEHÍCULO</th>
+                                <th scope="col">TIPO DE REPARACIÓN</th>
+                                <th scope="col">DESCRIPCION REPARACIÓN</th>
+                                <th scope="col">ESTADO DEL VEHÍCULO</th>
+                                <th scope="col">PRECIO</th>
+                                <th scope="col">MI VIDEO DE INGRESO</th>
+                            </tr>
+                        </thead>
+                       
+                         
+                        
+                        <tbody>
+                            <% if (locals.reparaciones) { %>
+                            <% reparaciones.forEach(reparacion => { %>
+                                
+                            <tr>
+                                <th scope="row">
+                                    <%= reparacion.id_reparacion %>
+                                </th>
+                                <th scope="col">
+                                    <%= vehiculos[reparacion.id_vehiculo] %>
+                                </th>
+                                <td>
+                                    <%= reparacion.descripcion_reparacion %>
+                                </td>
+                                <td>
+                                    <%= arrdescripcion[reparacion.descripcion_reparacion] %>
+                                </td>
+                                <td>
+                                    <%= reparacion.estado_reparacion %>
+                                </td>
+                                <td>
+                                    $<%= arrprecio[reparacion.descripcion_reparacion] %> </td>
+                                <td>
+                                    <div class="modal fade" id="Video_<%= reparacion.id_recepcion%>" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalToggleLabel">Video Filmado en el taller</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <video id="myVideo" width="420" height="276" controls>
+                                                        <source src="videos/<%= reparacion.id_recepcion%>.mp4" type="video/mp4">
+                                                    </video>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="btn btn-primary bg-success" data-bs-toggle="modal" href="#Video_<%= reparacion.id_recepcion%>" role="button"><i class="fas fa-video"></i></a>
+                                </td>
+                            </tr>
+                            <% }) %>
+                            </tr>
+                        </tbody>
+                        <% } %>
+                    </table>
+                    <br> <br>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <%- include("template/footer") %> <script src="js/Cliente.js"></script>

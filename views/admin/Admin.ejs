@@ -1,0 +1,260 @@
+<%- include("../template/header", {title:'Admin'}) %>
+    
+    <link rel="stylesheet" href="css/Admin.css">
+</head>
+
+<body>
+    <div class="Pagina_Principal">
+
+        <%- include("../template/navbar") %>
+        <div class="Principal container-fluid">
+            <br> 
+            <ul class="nav-p nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-1" type="button" role="tab" aria-controls="pills-home" style="text-transform: capitalize;" aria-selected="true">Administrar Hojas de reparacion&nbsp;&nbsp;<i class="fas fa-paste"></i></button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-2" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Ver facturas&nbsp;&nbsp;<i class="fas fa-file-invoice-dollar"></i></button>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <button id="btncrear" class="btn btn-success mb-2 "> AÑADIR </button> <br><br>
+                    <table id="Admin-Clientes" class="table table-bordered">
+                        <thead style="background-color:#6d6552; color:white">
+                            <tr>
+                                <th scope="col">RECEPCIÓN #</th>
+                                <th scope="col">CLIENTE</th>
+                                <th scope="col">VEHICULO A REPARAR</th>
+                                <th scope="col">REPARACIONES</th>
+                                <th scope="col">MECÁNICOS ENCARGADOS</th>
+                                <th scope="col">ESTADO DE REPARACIÓN</th>
+                                <th scope="col">VIDEO INGRESO</th>
+                                <th scope="col">ACCIONES</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% var i=0; lista_recepcion.forEach(recepcion => { %>
+                            <tr>
+                                <% var reparacioneslist='';  %> 
+                                <th><%= recepcion.id_recepcion %> </th>
+                                <th><%= arrclientes[recepcion.id_cliente] %></th>
+                                <th><%= arrvehiculos[recepcion.id_vehiculo] %> </th> 
+                                <th>
+                                    <% var j=1;var precio=0;reparaciones_pendientes[i].forEach(reparacion => { %>
+                                        <%= j %> 
+                                        <% if (j!=1) { reparacioneslist+=', '} %>
+                                        <%= reparacion.descripcion_reparacion %>
+                                        
+                                        <% reparacioneslist+=(reparacion.descripcion_reparacion) %> 
+                                        <% precio+=arrreparaciones[reparacion.descripcion_reparacion] %> 
+                                        <br> 
+                                        
+                                    <%j++  }) %>
+                                
+                                </th>
+                                <th>
+                                    <% var j=1; reparaciones_pendientes[i].forEach(reparacion => { %>
+                                        #<%= j %>
+                                        <% if (reparacion.mecanico_encargado!=0) { %>
+                                            <%= arrmecanicos[reparacion.mecanico_encargado] %> 
+                                        <% } else{%>
+                                            no asignado
+                                        <% }%>
+                                        <br>
+                                    <% j++}) %>
+                                    
+                                </th>
+                                <td>
+                                    <% var rep=1;var cont=0; reparaciones_pendientes[i].forEach(reparacion => { %>
+                                    <%= rep %> 
+                                    <%= reparacion.estado_reparacion %>
+                                    <br> 
+                                    <% if (reparacion.estado_reparacion=='reparacion realizada') {cont++} %>
+                                     
+                                    
+                                    
+                                    <%rep++  }) %>
+                                </td>
+                                <td>
+                                    <% if (recepcion.video) { %>
+                                        <div class="modal fade" id="Video_<%= recepcion.id_recepcion%>" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalToggleLabel">Video Filmado en el taller</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <video id="myVideo" width="420" height="276" controls>
+                                                            <source src="videos/<%= recepcion.id_recepcion%>.mp4" type="video/mp4">
+                                                        </video>
+                                                        
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a class="btn btn-primary bg-success" data-bs-toggle="modal" href="#Video_<%= recepcion.id_recepcion%>" role="button"><i class="fas fa-video"></i></a>
+                                        
+                                    <% } else { %>
+                                        <button id="video" onclick="abrirformvideo('<%= recepcion.id_recepcion%>')" class="btn btn-dark">subir video</button> 
+                                    <% }%>
+                                </td>
+                                <td class="text-center">
+                                    <a onclick="confirmar('<%= recepcion.id_recepcion %>','<%= arrclientes[recepcion.id_cliente] %>')" class="btnBorrar btn btn-danger" id="borrar_usuario">Eliminar</a>
+                                    <% if (rep==cont+1) { %>
+                                     <a onclick="generarFactura('<%= recepcion.id_recepcion %>','<%= arrclientes[recepcion.id_cliente] %>','<%= arrvehiculos[recepcion.id_vehiculo] %>','<%= reparacioneslist %>','<%= precio %>')"
+                                        class="btnBorrar btn btn-success" id="borrar_usuario">Generar factura</a>
+                                    <% } %>
+                                    
+                                </td>
+                                <% i++ %> 
+                            </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <table id="tablafactura" class="table table-bordered">
+                        <thead style="background-color: #5f5f5f; color:white">
+                            <tr>
+                                <th scope="col">FACTURA #</th>
+                                <th scope="col"># DE RECEPCION:</th>
+                                <th scope="col">FECHA DE FACTURACION</th>
+                                <th scope="col">NOMBRE DEL CLIENTE</th>
+                                <th scope="col">NOMBRE DEL VEHICULO</th>
+                                <th scope="col">REPARACIONES REALIZADAS</th>
+                                <th scope="col">COSTO TOTAL</th>
+                                <th scope="col">ESTADO DEL PAGO</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% facturas.forEach(factura => { %>
+                             <tr>
+                                <td><%= factura.id_factura %> </td>
+                                <td><%= factura.id_recepcion %> </td>
+                                <td><%= factura.fecha_generacion %> </td>
+                                <td><%= factura.nombre_cliente %> </td>
+                                <td><%= factura.nombre_vehiculo %> </td>
+                                <td><%= factura.reparaciones_realizadas %> </td>
+                                <td>$<%= factura.costo_total %> </td>
+                                <td><%= factura.estado_pago %> 
+                                <% if (factura.estado_pago=='esperando pago del cliente') { %>
+                                    <button type="button" onclick="pagarfactura('<%= factura.id_factura %>')" class="btn btn-primary mt-2 mb-2">Pagar manualmente</button>
+                                <% } %>
+                                </td>
+                            </tr>
+                            <% }) %>
+                            
+                            
+                            
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!---->
+            </div>
+            <br> <br>
+        </div>
+    </div> 
+    <!-- modal recepcion -->
+    <div class="modal fade" id="modal-recepcion" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal-recepcionLabel">Crear recepcion</h5>
+            </div>
+            <form id="formRecepcion" required>
+                  <div class="modal-body">
+
+                  <div class="form-group">
+                      <label for="id_cliente" class="col-form-label">nombre del propietario:</label>
+                      <select class="form-select" aria-label="Default select example" id="id_cliente" name="id_cliente" required>
+                          <% clientes.forEach(cliente => { %>
+                              <option value="<%= cliente.id_cliente %>"><%= cliente.nombre %></option>
+                          <% }) %>
+                      </select>
+                  </div>
+                <div class="form-group">
+                    <label for="id_vehiculo" class="col-form-label">vehiculos registrados del propietario:</label>
+                    <select class="form-select" aria-label="Default select example" id="id_vehiculo" name="id_vehiculo"  required>
+                        <option selected disabled>porfavor elija un usuario primero</option>
+                    </select>
+                </div>
+                
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary close" >Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Siguiente</button>
+                </div>
+            </form>
+          </div>
+        </div>
+    </div>
+    
+    <!-- modal reparaciones -->
+    <div class="modal fade" id="modal-reparacion" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal-reparacionLabel">Crear reparacion</h5>
+            </div>
+            <form id="formReparacion" required>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="descripcion_reparacion" id="elegir_reparacion" class="col-form-label">elija una reparacion:</label>
+                        <select class="form-select" aria-label="Default select example" id="descripcion_reparacion" name="descripcion_reparacion" required>
+                            <% lista_reparaciones.forEach(reparacion => { %>
+                                <option value="<%= reparacion.titulo_lista %>"><%= reparacion.titulo_lista %></option>
+                            <% }) %>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary closemecanico" >Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            </form>
+          </div>
+        </div>
+    </div>
+    <!-- Button trigger modal -->
+      <!-- Modal -->
+    <div class="modal fade" id="videomodal" tabindex="-1" role="dialog" aria-labelledby="videomodalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <form id="videoForm">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">elegir video</h5>
+                </div>
+                
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="archivo">video de ingreso</label>
+                            <input type="file" class="form-control-file" id="archivo" name="archivo" accept="video/mp4,video/x-m4v,video/*">
+                        </div>
+                    </div>
+                
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="cerrarvideo()">Close</button>
+                <button type="submit" class="btn btn-primary">Guardar video</button>
+                </div>
+            </form>
+          </div>
+        </div>
+    </div>
+
+    <script src="js/Principal.js"></script>
+    
+    <script> 
+    var vehiculoslist= JSON.parse('<%- JSON.stringify(vehiculos) %>');
+     </script>
+    
+    <%- include("../template/footer") %>    
+    <script src="js/Admin_tabla.js"></script>
+    <script src="js/archivos.js"></script>
+    <script></script>
+    

@@ -1,0 +1,128 @@
+
+
+
+.Pagina_Principal{
+	height: 800px;
+	
+}
+
+.Principal{
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	/*border: 5px solid black;*/
+	justify-content: center;
+	height: 400px;
+	/*background-color: rgb(0,0,0,0.9);*/
+	margin-top: 100px;
+}
+
+.Principal .Login{
+	box-shadow: 0 0 0 2px black;
+	background-color: white;
+	width: 33%;
+	height: 470px;
+}
+
+.Principal .Aviso{
+	box-shadow: 0 0 0 2px black;
+	width: 43%;
+	height: 540px;
+
+}
+
+.Principal .Aviso div{
+	position: relative;
+	text-align: center;
+	color: white;
+	top: -350px;
+}
+
+.Principal .Aviso div h1{
+	position: relative;
+	font-weight: bold;
+	font-size:6vw;
+	width: 80%;
+	top: -30px;
+	left: 12%;
+}
+
+.Principal .Aviso div p{
+	position: relative;
+	justify-content: justify;
+	color: white;
+	width: 80%;
+	font-weight: bold;
+	left: 10%;
+}
+
+.Principal .Aviso img{
+	height: 540px;
+	width: 100%;
+	filter: blur(8px);
+	filter: brightness(50%);
+}
+
+.Principal .Aviso a{
+	position: relative;
+	left: 38%;
+	top: 30px;
+	
+}
+
+
+
+.Principal .Login{
+	text-align: center;
+	width: 38%;
+	height: 540px;
+}
+
+.Principal .Login h3{
+	font-weight: bold;
+	font-size: 3vw;
+}
+
+.Principal .Login input{
+	position: relative;
+	width: 42%;
+	border-left: 0;
+	border-top: 0;
+	border-right: 0;
+	border-bottom: 1px solid black;
+	left: 5%;
+	margin-bottom: 35px;
+	margin-left: 10px;
+	border-radius: 0;
+}
+
+.Principal .Login button{
+	border-radius: 10px;
+	width: 20%;
+}
+
+.Principal .Login button a{
+	text-decoration: none;
+	color: white;
+}
+
+.mb-3{
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

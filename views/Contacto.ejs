@@ -1,0 +1,107 @@
+<%- include("template/header", {title:'Contacto'}) %>
+
+    <link rel="stylesheet" href="css/Servicios.css">
+    <link rel="stylesheet" href="css/Contacto.css">
+</head>
+
+<body>
+    <div class="Pagina_Principal">
+        
+        <%- include("template/navbar") %>
+
+        <div class="Contacto-img">
+            <img src="img/contactenos.png" alt="">
+        </div>
+        <div class="Formulario">
+            <div class="Info">
+                <form action=""><br>
+                    <h3>Contáctenos</h3> <br>
+                    <p class="Solicite">
+                        Solicite su servicio con nuestro mecánicos de confianza.
+                    </p>
+                    <section>
+                        <h2><i class="fas fa-map-marker-alt"></i></h2>
+                        <p>
+                            UBICACIÓN: <br>
+                            Calle 166 # 54-39 Bogotá - <br> Colombia
+                        </p>
+                    </section>
+                    <section>
+                        <h2><i class="fas fa-envelope-open-text"></i></h2>
+                        <p>
+                            EMAIL: <br>
+                            cars@tallerautomotriz.com.co
+                        </p>
+                    </section>
+                    <section>
+                        <h2><i class="fas fa-mobile"></i></h2>
+                        <p>
+                            TELÉFONOS: <br>
+                            +57 000 0000<br> +57 000 0000
+                        </p>
+                    </section>
+                </form>
+            </div>
+            <div class="Personal">
+                <form action=""><br>
+                    <label for="exampleInputEmail1" class="form-label">
+                        <h2>Formulario de cotización o consultas</h2>
+                    </label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre & Apellidos">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Telefono / Celular">
+                    <textarea class="form-control" placeholder="Mensaje" id="floatingTextarea2" style="height: 100px"></textarea>
+                    <button type="submit" class="btn btn-danger">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+        <div class="Blog"><br><br>
+            <h1>Blog- Artículos</h1>
+            <p>Conoce algunos de nuestros artículos y manten en buen estado tu vehículo con la información que brindamos.</p>
+            <div class="Tarjetas">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/Blog_1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Sincronización de auto, como
+                            saber cuando lo necesita</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="img/Blog_2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Cambio de aceite y filtro, cada
+                            cuanto</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="img/Blog_3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Cambio de correa de repartición,
+                            cada cuanto</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cont-princ-slider">
+            <h3>MARCAS QUE NOS RECOMIENDAN</h3><br>
+            <div class="slier-prin">
+                <div class="juegos_DWG">
+                    <img src="img_servicios/logo-nissand.png" alt="">
+                </div>
+                <div class="juegos_DWG">
+                    <img src="img_servicios/logo-bmw1.png" alt="">
+                </div>
+                <div class="juegos_DWG">
+                    <img src="img_servicios/logo-chevrolet1.png" alt="">
+                </div>
+                <div class="juegos_DWG">
+                    <img src="img_servicios/logo-honda0.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!---->
+        
+    </div>
+    <script src="js/Login.js"></script>
+        
+    <%- include("template/footer") %>   

@@ -1,0 +1,205 @@
+.Pagina_Principal {
+    height: 100%;
+}
+
+
+.img_servicio img {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.d-flex .nav button:hover,
+.d-flex .nav button.active {
+    background-color: black !important;
+    color: white !important;
+    border-bottom: 3px solid transparent;
+    border-radius: 0;
+}
+
+
+.d-flex .nav {
+    position: relative;
+    border: 2px solid black;
+    border-radius: 10px;
+    left: 1.5%;
+    top: 122px;
+}
+
+
+.d-flex .nav button {
+    color: black !important;
+    border-bottom: 3px solid transparent;
+    border-radius: 0;
+    width: 300px;
+
+}
+
+.tab-content {
+    position: relative;
+    text-align: center;
+    width: 95%;
+    margin-left: 50px;
+    top: 10px;
+    left: -2%;
+
+}
+
+.Mantenimiento{
+	padding-top: 55px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.Mantenimiento p{
+	margin-top: 50px;
+}
+
+.Tarjetas{
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+	display: flex;
+	text-align: center;
+    margin-left: 55px;
+    margin-top: 65px;
+    margin-bottom: 25px;
+}
+
+
+.Publicidad{
+	position: relative;
+	text-align: center;
+	margin-bottom: 25px;
+	margin-top: 25px;
+	width: 100%;
+	height: 100%;
+}
+
+.Publicidad div img{
+		position: relative;
+		width: 160%;
+		height: 300px;
+		left: -40%;
+}
+
+.Publicidad .Img-Letra{
+	text-align: center;
+	justify-content: center;
+	display: flex;
+	flex-direction: row;
+	margin-top: 55px;
+}
+
+.Publicidad .Img-Letra div{
+	position: relative;
+	text-align: center;
+	left: 15%;
+	margin-left: 50px;
+
+}
+
+.Publicidad .h1-publicidad{
+	position: relative;
+	font-size: 2vw;
+	margin-top: 20px;
+	border-bottom: 1px solid darkred;
+	width: 48%;
+	left: 25%;
+}
+
+.Publicidad .p-publicidad{
+	position: relative;
+	font-size: 1.2vw;
+	margin-top: 20px;
+	width: 60%;
+	left: 20%;
+}
+
+.detalles{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	align-items: left;
+}
+
+.detalles{
+	position: relative;
+	width: 50%;
+	height: 100%;
+	left: 2%;
+}
+
+.detalles p{
+	position: relative;
+	/*border: 1px solid black;
+	/*background-color: rgb(255, 0, 0);*/
+	color: black;
+	padding: 5px;
+	margin: auto;
+	width:45%;
+	font-size: 1vw;
+
+	
+}
+
+#Video_111{
+	position: relative;
+	margin-bottom: 15px;
+	margin-top: 45px;
+	
+}
+
+
+.Publicidad_video{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.Publicidad_video div{
+	position: relative;
+	margin-left: 30px;
+	left: 2%;
+	margin-top: 20px;
+}
+
+.Publicidad_video div video{
+	width: 420px;
+	height: 200px;
+	border: 3px solid black;
+}
+
+.cont-princ-slider{
+	text-align: center;
+	height: 100%;
+	margin-bottom: 50px;
+	margin-top: 70px;
+
+}
+
+.slier-prin{
+	/*border: 5px solid black;*/
+}
+
+.cont-princ-slider h3{
+	margin-bottom: 25px;
+	margin-top: 25px;
+}
+
+.juegos_DWG{
+	/*border: 5px solid yellow;*/
+	height: 100px;
+}
+
+.juegos_DWG img{
+	width: 200px;
+	height: 50px;
+}

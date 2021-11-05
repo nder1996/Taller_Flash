@@ -1,0 +1,98 @@
+<%- include("../template/header", {title:'Admin'}) %>
+    
+    <link rel="stylesheet" href="css/Admin.css">
+</head>
+
+<body>
+
+    <%- include("../template/navbar") %>
+    <div class="Principal container-fluid">
+    <div class="container mb-5">
+        <button type="button" id="btncrear" class="btn btn-outline-primary mt-4"><i class="fas fa-cogs"></i>&nbsp; Añadir Mecanico</button>
+        <table class="table table-bordered table-striped text-center mt-4" id="tabla_mecanicos">
+            <thead>
+                <tr class="text-white" style="background-color:#6d6552; color:white !important">
+                    <th scope="col">CÓDIGO DE EMPLEADO</th>
+                    <th scope="col">CÉDULA</th>
+                    <th scope="col">NOMBRE</th>
+                    <th scope="col">CORREO ELECTRÓNICO</th>
+                    <th scope="col">ACCIONES</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% mecanicos.forEach(mecanico => { %>
+                <tr>
+                    <th><%= mecanico.id_mecanico %> </th>
+                    <th><%= mecanico.cedula %></th>
+                    <th><%= mecanico.nombre %></th>
+                    <td><%= mecanico.email %></td>
+                    <td hidden><%= mecanico.password %></td>
+                    
+                    <td class="Btn_Personal">
+                        <button id="editar_mecanico" class="btn btn-outline-info"><i class="fas fa-edit"></i>editar</button>
+                        
+                        <a  onclick="confirmar('<%= mecanico.id_mecanico %>','<%= mecanico.nombre %>')" class="btn btn-outline-danger"><i class="far fa-trash-alt"></i></i>borrar</a>
+                    </td>
+                </tr>
+                <% }) %>
+                
+            </tbody>
+        </table>
+    </div>         
+            
+            
+
+    
+    <div class="modal fade" id="modal-mecanico" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-mecanicoLabel">Crear mecanico</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form id="formMecanico">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="id_mecanico" name="id_mecanico" hidden>
+                    </div>
+                    <div class="form-group">
+                        <label for="cedula" class="col-form-label">cedula:</label>
+                        <input type="text" class="form-control" id="cedula" name="cedula" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre" class="col-form-label">nombre:</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="col-form-label">correo electronico:</label>
+                        <input type="text" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="col-form-label">contraseña suministrada:</label>
+                        <input type="text" class="form-control" id="password" name="password" required>
+                    </div>
+                
+                </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary close" >Cerrar</button>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+        </form>
+        </div>
+      </div>
+    </div>              
+ 
+
+
+
+
+<%- include("../template/footer") %>  
+
+<script src="js/Principal.js"></script>
+  
+<script src="js/Admin_mecanico.js">
+
+</script>
